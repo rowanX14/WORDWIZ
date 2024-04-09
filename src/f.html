@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORDWIZ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1>WORDWIZ</h1>
+    </nav>
+    <div>
+        <h1 class="he">NOW Listen to the Audio and write the letter one by one</h1>
+        <h1 class="hf">Instruction:Once found the answer Click <span style="color: rgb(20, 246, 50);">NEXT</span>,in order to check the written letter click <span style="color: rgb(6, 176, 255);">CHECK</span>,if you had made a mistake click <span style="color: rgb(255, 0, 0);">CLEAR IT</span> and write the letter again and finally if you want to remove the letter click<span style="color: rgb(255, 255, 0);">DELETE</span></h1>       
+         <h1 class="hs"><span style="background-color: rgba(227, 32, 155, 0.467);">___</span></h1>
+    </div>
+    <main> 
+        <div class="display-screen">
+            <img id="displayImage" src="download (1).jpg" alt="Display Screen">
+        </div>
+        <div class="canvas-container">
+            <canvas id="myCanvas"></canvas>
+        </div>
+        <div class="button-container">
+            <button id="clear-button">Clear It</button>
+            <button id="erase-button">Erase</button>
+            <button id="check-button">Check</button>
+            <button id="next-button">Next</button>
+        </div><h1 class="hg">SCORE:0</h1>
+    </main>
+    <button id="recognizeButton" style="display:none;">Recognize Character</button>
+    <div id="recognizedCharacter"></div>
+    <div id="sound-button">
+        <img src="speaker_icon.png" alt="Speaker Icon">
+    </div>
+
+    <audio id="audio" src="BUS.mp3"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/ocr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
